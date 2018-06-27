@@ -45,7 +45,8 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { NavbarModule, WavesModule } from 'angular-bootstrap-md';
+import { NavbarModule} from 'angular-bootstrap-md';
+import { PropTableComponent } from './prop-table/prop-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { NavbarModule, WavesModule } from 'angular-bootstrap-md';
     LayoutComponent,
     NavbarComponent,
     SidebarComponent,
+    PropTableComponent,
    
   ],
   imports: [
