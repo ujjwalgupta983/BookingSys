@@ -1,0 +1,16 @@
+{   "properties" :{ "items":[ {
+        "type": "PG",
+        "city" : "Faizabad",
+        "state" : "Andy",
+         "prop_name":"abhinav"
+      }, 
+      {
+        "type": "PG",
+        "city" : "abhinav",
+        "state" : "Lisa",
+        "prop_name":"Srivastava"
+      }
+    ]
+  }
+    
+}
