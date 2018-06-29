@@ -41,21 +41,21 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { RegisterComponent } from './register/register.component';
+//import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarModule} from 'angular-bootstrap-md';
 import { PropTableComponent } from './prop-table/prop-table.component';
-import {UserService} from './services/user.service';
+//import {UserService} from './services/user.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RegisterComponent,
+   // RegisterComponent,
     LoginComponent,
     LayoutComponent,
     NavbarComponent,
@@ -65,7 +65,7 @@ import {UserService} from './services/user.service';
   ],
   imports: [
     BrowserModule,
-    UserService,
+   
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
     BrowserAnimationsModule,
     MatButtonModule,
@@ -113,6 +113,7 @@ import {UserService} from './services/user.service';
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
+  // UserService,
     TabledataService,
     {
         provide: HTTP_INTERCEPTORS,
