@@ -1,9 +1,10 @@
-
+import { jwtInterceptor } from './_helpers/jwt.interceptor';
+import { TabledataService } from './services/table-data.service';
 import { rootRouterConfig } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
-
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MDBBootstrapModule, WavesModule } from 'angular-bootstrap-md';
 import { CdkTableModule } from '@angular/cdk/table';
 import { AppComponent } from './app.component';
@@ -108,10 +109,16 @@ import {UserService} from './services/user.service';
    MatPaginatorModule,
    CdkTableModule,
    MDBBootstrapModule.forRoot(),
-   NavbarModule,WavesModule
+   NavbarModule,WavesModule,HttpClientModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [
+    TabledataService,
+    {
+        provide: HTTP_INTERCEPTORS,
+        useClass: jwtInterceptor,
+        multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

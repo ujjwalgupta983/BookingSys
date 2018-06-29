@@ -1,10 +1,10 @@
 export class Property {
-    id:number;
+    propid:number;
     propName:string;
     addsprimary:string;
     addssecondary:string;
     type:string;
-    oId:string;
+    oId:number;
     city:string;
     state:string;
     pincode:number;

@@ -1,15 +1,15 @@
+import { TabledataService } from './table-data.service';
 import { TestBed, inject } from '@angular/core/testing';
 
-import { TableDataService } from './table-data.service';
 
 describe('TableDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [TableDataService]
+      providers: [TabledataService]
     });
   });
 
-  it('should be created', inject([TableDataService], (service: TableDataService) => {
+  it('should be created', inject([TabledataService], (service: TabledataService) => {
     expect(service).toBeTruthy();
   }));
 });
