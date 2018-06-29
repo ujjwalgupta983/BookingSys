@@ -48,9 +48,7 @@ import {MatPaginator, MatSort} from '@angular/material';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 
-/**
- * @title Table retrieving data through HTTP
- */
+
 @Component({
   selector: 'app-prop-table',
   templateUrl: './prop-table.component.html',
@@ -59,46 +57,29 @@ import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 export class PropTableComponent implements OnInit {
   displayedColumns: string[] = ['propId', 'city', 'state', 'type'];
   exampleDatabase: ExampleHttpDao | null;
-  data: GithubIssue[] = [];
+  data: any|GithubIssue;
 
-  resultsLength = 0;
-  isLoadingResults = true;
-  isRateLimitReached = false;
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-
+  
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.exampleDatabase = new ExampleHttpDao(this.http);
-
-    // If the user changes the sort order, reset back to the first page.
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-
-    merge(this.sort.sortChange, this.paginator.page)
+    merge()
       .pipe(
         startWith({}),
         switchMap(() => {
-          this.isLoadingResults = true;
-          return this.exampleDatabase!.getRepoIssues(
-            this.sort.active, this.sort.direction, this.paginator.pageIndex);
+          return this.exampleDatabase!.getRepoIssues();
         }),
-        map(data => {
-          // Flip flag to show that loading has finished.
-          this.isLoadingResults = false;
-          this.isRateLimitReached = false;
-          this.resultsLength = data.total_count;
+        map(datas => {
 
-          return data.items;
+          return datas;
+
         }),
         catchError(() => {
-          this.isLoadingResults = false;
-          // Catch if the GitHub API has reached its rate limit. Return empty data.
-          this.isRateLimitReached = true;
+         
           return observableOf([]);
         })
-      ).subscribe(data => this.data = data);
+      ).subscribe(res => this.data = res);
   }
 }
 
@@ -128,10 +109,10 @@ export interface GithubIssue {
 export class ExampleHttpDao {
   constructor(private http: HttpClient) {}
 
-  getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi> {
+  getRepoIssues(): Observable<GithubIssue> {
     const href ='http://localhost:57055/api/Assests';
    // const requestUrl =`${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
 
-    return this.http.get<GithubApi>(href);
+    return this.http.get<GithubIssue>(href);
   }
 }
