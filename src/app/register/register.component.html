@@ -1,0 +1,53 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4"></div>
+              <div class="col-md-4">
+              <div class="card">
+              <div class="card-header card-header-danger">
+                   <h2><p class="card-category">Register</p></h2> </div>
+              <div class="card-body">
+                  <div class="register-form-container">
+               <form class="register-form-container" (ngSubmit)="register()" #regform="ngForm">
+                      <mat-form-field>
+                        <input matInput type="text" placeholder="Pick a User Name" name="uname" [(ngModel)]="model.uname" #uname="ngModel" required>
+                      </mat-form-field>
+                      
+                      <mat-form-field>
+                        <input matInput type="email" placeholder="Enter a Email" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+                      </mat-form-field>
+                  <mat-form-field>
+                  <input matInput type="text" placeholder="Full Name" name="fname" [(ngModel)]="model.fname" #fname="ngModel" required>
+                  </mat-form-field>
+                 
+                  <mat-radio-group class="radio" name="gender" [(ngModel)]="model.gen" #gender="ngModel">
+                    
+                <mat-radio-button *ngFor="let gender of Gender" [value]="gender" >
+                  {{gender}}   
+                      </mat-radio-button>
+                    </mat-radio-group>
+                       <mat-form-field>
+                         <span matPrefix>+91 &nbsp;</span>
+                         <input type="tel" matInput placeholder="Telephone" name="tel" [(ngModel)]="model.tel" #tel="ngModel" required>
+                         <mat-icon matSuffix>mode_edit</mat-icon>
+                       </mat-form-field> 
+                       <mat-form-field>
+                         <input matInput type ="password" placeholder="Choose a Confidential Code for You" name="confword" [(ngModel)]="model.confword" #confword="ngModel" required>
+                       </mat-form-field>
+                       <div class="button-row">
+                          <button matButton  mat-raised-button color="primary" >
+                           Register
+                           </button>
+                           <button matButton [routerLink]="['/login']"  mat-raised-button color="warn">Already Signed Up</button>
+                         </div>
+                  
+                        </form>
+                        </div>
+                </div>
+                </div>
+                </div>
+                <div class="col-md-4"></div>
+                </div>
+              </div>
+              </div>
+             

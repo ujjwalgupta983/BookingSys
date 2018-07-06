@@ -1,3 +1,36 @@
-<p>
-  login works!
-</p>
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="card">
+              <div class="card-header card-header-danger">
+                
+                  <h2><p class="card-category">Login</p></h2>
+              </div>
+              <div class="card-body">
+                <div class="form-container">
+                  <form  class="form-container"#loginform="ngForm" (ngSubmit)="login()">
+                  <mat-form-field>
+                      <input matInput type="text" placeholder="UserName" name="uname" #uname="ngModel" [(ngModel)]="model.uname">
+                    </mat-form-field>
+                    <mat-form-field>
+                         <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" name="confword" #confword="ngModel" [(ngModel)]="model.confword">
+                         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                         </mat-form-field>
+                         <div class="button-row">
+                            <button matButton mat-raised-button color="primary">Login</button> 
+                            <button mat-stroked-button color="accent" [routerLink]="['/register']">Register</button>
+               
+                          </div>
+                        </form>              
+                        </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-4">
+      
+      </div>
+    </div>
+  </div>
+</div>

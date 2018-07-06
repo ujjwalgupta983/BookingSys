@@ -1,7 +1,11 @@
 export class User {
+   
     id: number;
-    Name: string;
+    uname: string;
+    fname:string;
     email: string;
-    passcode: string;
-    
+    gen:string;
+    tel:number;
+    confword: string;
+        
 }

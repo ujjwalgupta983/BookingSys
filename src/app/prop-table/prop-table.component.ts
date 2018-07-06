@@ -234,7 +234,7 @@ import {catchError, map, startWith, switchMap} from 'rxjs/operators';
   
 })
 export class PropTableComponent implements OnInit {
-  displayedColumns: string[] = ['city', 'state', 'type', 'prop_name'];
+  displayedColumns: string[] = ['city', 'state', 'type', 'prop_name','pincode','address'];
   exampleDatabase: ExampleHttpDao | null;
   data: GithubIssue[] = [];
 
@@ -293,6 +293,8 @@ export interface GithubIssue {
   city: string;
   state: string;
   prop_name: string;
+  Address:string;
+  pincode:string;
 }
 
 export class ExampleHttpDao {

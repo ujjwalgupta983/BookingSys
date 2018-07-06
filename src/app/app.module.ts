@@ -41,31 +41,37 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-//import { RegisterComponent } from './register/register.component';
+import {AuthenticationService} from './services/index';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarModule} from 'angular-bootstrap-md';
 import { PropTableComponent } from './prop-table/prop-table.component';
-//import {UserService} from './services/user.service';
+import { TableComponent } from './table/table.component';
+import { RegisterComponent } from './register/register.component';
 
-
+import {UserProfileComponent} from './user-profile/user-profile.component';
+import { AuthGuard } from './_guards/index';
+import{UserService} from './services/index'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-   // RegisterComponent,
     LoginComponent,
     LayoutComponent,
     NavbarComponent,
     SidebarComponent,
     PropTableComponent,
-   
+    TableComponent,
+    RegisterComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
-   
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
     BrowserAnimationsModule,
     MatButtonModule,
@@ -113,7 +119,9 @@ import { PropTableComponent } from './prop-table/prop-table.component';
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
-  // UserService,
+  UserService,
+  AuthGuard,
+  AuthenticationService,
     TabledataService,
     {
         provide: HTTP_INTERCEPTORS,

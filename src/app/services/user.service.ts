@@ -5,7 +5,7 @@ import { User } from '../_models/user';
 
 @Injectable()
 export class UserService {
-    readonly root_url="http://localhost:57055"
+    readonly root_url="http://localhost:3000/user"
     constructor(private http: HttpClient) { }
 
     getAll() {
@@ -25,7 +25,7 @@ export class UserService {
         //let headers = new Headers({ 'Content-Type': 'application/json' });
         //let options = new RequestOptions({ headers: headers });
 console.log(headers);
-        return this.http.post(this.root_url+"/api/Owner/", body,{headers});
+        return this.http.post(this.root_url,body,{headers});
     
     }
 

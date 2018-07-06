@@ -1,16 +1,30 @@
-{   "properties" :{ "items":[ {
-        "type": "PG",
-        "city" : "Faizabad",
-        "state" : "Andy",
-         "prop_name":"abhinav"
-      }, 
+{
+  "user": {
+    "uname": "abhi001",
+    "email": "abhinavsri000@gmail.com",
+    "fname": "Abhinav",
+    "gen": " Male ",
+    "tel": "9718381160",
+    "confword": "Abhinav001@"
+  },
+  "properties": {
+    "items": [
       {
         "type": "PG",
-        "city" : "abhinav",
-        "state" : "Lisa",
-        "prop_name":"Srivastava"
+        "city": "Faizabad",
+        "state": "Andy",
+        "prop_name": "abhinav",
+        "address": "asjdfkljslkfjkldsjfds",
+        "pincode": "dklsadjklsads"
+      },
+      {
+        "type": "PG",
+        "city": "abhinav",
+        "state": "Lisa",
+        "prop_name": "Srivastava",
+        "address": "sdnjkfkldsfdsfdsf",
+        "pincode": "jskdsdkasdasd"
       }
     ]
   }
-    
 }
