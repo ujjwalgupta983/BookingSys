@@ -1,5 +1,6 @@
  import { Component, OnInit } from '@angular/core';
- declare const $:any;
+ import { CommonModule } from'@angular/common';
+ 
  
 @Component({
   selector: 'app-sidebar',
@@ -7,11 +8,9 @@
   styleUrls: ['./sidebar.component.scss'],
 
 })
-
-
 export class SidebarComponent implements OnInit {
-
-Items:['DashBoard','Properties','Profile','Settings'];
+ shouldRun =true;
+j:any=['DashBoard','Properties','Profile','Settings'];
   constructor() {
     
     }

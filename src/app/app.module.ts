@@ -50,11 +50,16 @@ import { NavbarModule} from 'angular-bootstrap-md';
 import { PropTableComponent } from './prop-table/prop-table.component';
 import { TableComponent } from './table/table.component';
 import { RegisterComponent } from './register/register.component';
-
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import { AuthGuard } from './_guards/index';
 import{UserService} from './services/index'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
+import { OwnerlayoutComponent } from './layout/ownerlayout/ownerlayout.component';
+import { UserlayoutComponent } from './layout/userlayout/userlayout.component';
+import{ CommonModule} from "@angular/common";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,9 +72,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TableComponent,
     RegisterComponent,
     UserProfileComponent,
+    AdminlayoutComponent,
+    OwnerlayoutComponent,
+    UserlayoutComponent,
   ],
   imports: [
-    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
@@ -115,7 +122,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
    MatPaginatorModule,
    CdkTableModule,
    MDBBootstrapModule.forRoot(),
-   NavbarModule,WavesModule,HttpClientModule
+   NavbarModule,WavesModule,HttpClientModule,
+   CommonModule,
+  
+   
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [

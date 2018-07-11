@@ -1,52 +1,9 @@
-<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
-          
-<logo><a class="navbar-brand" href="#">Property_BookingSystem</a></logo>
-
-
-  <links>
-
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-              <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown" dropdown>
-              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-              DashBoard<span class="caret"></span></a>
-              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Create DashBoard</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">DashBoard1</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">DashBoard2</a>
-                  <div class="divider dropdown-divider"></div>
-                  <a class="dropdown-item waves-light" mdbWavesEffect href="#">Settings</a>
-              </div>
-          </li>
-
-          <li class="nav-item">
-              <a class="nav-link waves-light" mdbWavesEffect>Properties</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link waves-light" mdbWavesEffect>Profile</a>
-          </li>
-<li class="nav-item">
-  <a class="nav-link waves-light" mdbWavesEffect>Settings</a>
-</li>
-          
-      </ul>
-      <form class="form-inline waves-light" mdbWavesEffect>
-          <div class="md-form mt-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          </div>
-      </form>
-  </links>
-  
-</mdb-navbar>  -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">PropBok</a>
-        <input class="form-control form-control-dark w-100" placeholder="Search" aria-label="Search" type="text">
-        <ul class="navbar-nav px-3">
-          <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">Sign out</a>
-          </li>
-        </ul>
-      </nav>
-  
+<div class="navdiv"><nav class="navbar navbar-expand-sm navbar-light fixed-top ">
+  <a class="navbar-brand" href="#"><img src="" alt="PropBok"/></a>
+    <ul class="navbar-nav">
+      <li [class]="[i.class]" *ngFor="let i of j">
+       {{i.name}}
+      </li>
+    </ul>
+</nav> 
+</div>
