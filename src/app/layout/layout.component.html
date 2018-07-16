@@ -1,3 +1,9 @@
-<div>
-    <app-ownerlayout></app-ownerlayout>
+<div *ngIf="user"> 
+<app-userlayout></app-userlayout>
+</div>
+<div *ngIf="owner">
+<app-ownerlayout></app-ownerlayout>
+</div>
+<div *ngIf="admin">
+<app-adminlayout></app-adminlayout>
 </div>

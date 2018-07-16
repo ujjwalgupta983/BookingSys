@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LayoutComponent implements OnInit {
-id:any[]=[
- 
-]
+id:any[]=[];
+
+user=true;
+owner=false;
+admin=false; 
+
 items:any[]=['jaakfd','fafdsfsd','fdfdsfdf','fsdfsdf'];
   constructor() { }
   ngOnInit() {

@@ -1,4 +1,4 @@
-<div class="navdiv"><nav class="navbar navbar-expand-sm navbar-light fixed-top ">
+<!-- <nav class="navbar navbar-expand-sm navbar-light fixed-top ">
   <a class="navbar-brand" href="#"><img src="" alt="PropBok"/></a>
     <ul class="navbar-nav">
       <li [class]="[i.class]" *ngFor="let i of j">
@@ -6,4 +6,81 @@
       </li>
     </ul>
 </nav> 
-</div>
+ -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
+	<div class="navbar-header d-flex col">
+		<a class="navbar-brand" href="#">Home<b>Away</b></a>  		
+		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+			<span class="navbar-toggler-icon"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<ul class="nav navbar-nav">
+			<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">About</a></li>			
+			<li class="nav-item dropdown">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="#" class="dropdown-item">Apartments For Rent</a></li>
+					<li><a href="#" class="dropdown-item">PG for Rent</a></li>
+					<li><a href="#" class="dropdown-item">Hotels for Rent</a></li>
+				</ul>
+			</li>
+			<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+		</ul>
+		<form class="navbar-form form-inline">
+			<div class="input-group search-box">								
+				<input type="text" id="search" class="form-control" placeholder="Search here...">
+				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+			</div>
+		</form>
+		<ul class="nav navbar-nav navbar-right ml-auto">			
+			<li class="nav-item">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+				
+			</li>
+			<li class="nav-item">
+				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"[routerLink]="['/owner-layout']" >Sign up</a>
+			</li>
+		
+		</ul>
+	</div>
+</nav> <!-- 
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link disabled" href="#">Disabled</a>
+		</li>
+		<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+		  <div class="dropdown-menu" aria-labelledby="dropdown01">
+			<a class="dropdown-item" href="#">Action</a>
+			<a class="dropdown-item" href="#">Another action</a>
+			<a class="dropdown-item" href="#">Something else here</a>
+		  </div>
+		</li>
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	  </form>
+	</div>
+  </nav> -->
