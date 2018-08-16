@@ -15,7 +15,7 @@ export const rootRouterConfig: Routes = [
  {path:'visitor' ,loadChildren:'./visitor/visitor.module#visitorModule'},*/
  {
     path:'',
-    redirectTo: 'user-profile',
+    redirectTo: 'Owner-layout',
     pathMatch: 'full',
   }, {
     path: '',
