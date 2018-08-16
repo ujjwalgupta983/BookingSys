@@ -15,10 +15,10 @@ export const rootRouterConfig: Routes = [
  {path:'visitor' ,loadChildren:'./visitor/visitor.module#visitorModule'},*/
  {
     path:'',
-    redirectTo: 'visitor-layout',
+    redirectTo: 'user-profile',
     pathMatch: 'full',
   }, {
-    path: 'owner-layout',
+    path: '',
     component: OwnerLayoutComponent,
     canActivate: [AuthGuard] , 
     children: [
@@ -26,7 +26,7 @@ export const rootRouterConfig: Routes = [
       path: '',
       loadChildren: './owner/owner.module#OwnerModule'
   }]},
-  {
+ /*  {
       path:'visitor-layout',
       component:VisitorLayoutComponent,
       children: [
@@ -44,7 +44,7 @@ export const rootRouterConfig: Routes = [
         path: '',
         loadChildren: './admin/admin.module#AdminModule'
     }]
-      },
+      }, */
       {path:'**',component:Error404Component},
  
   

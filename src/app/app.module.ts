@@ -16,7 +16,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PropTableComponent } from './prop-table/prop-table.component';
 import { TableComponent } from './table/table.component';
 import { RegisterComponent } from './register/register.component';
-import {UserProfileComponent} from './user-profile/user-profile.component';
 import { AuthGuard } from './_guards/index';
 import{UserService} from './services/index'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,7 +38,6 @@ import { AngMatModule } from "./ang-mat/ang-mat.module";
     PropTableComponent,
     TableComponent,
     RegisterComponent,
-    UserProfileComponent,
     AdminlayoutComponent,
     OwnerlayoutComponent,
     UserlayoutComponent,
@@ -55,10 +53,10 @@ import { AngMatModule } from "./ang-mat/ang-mat.module";
     ReactiveFormsModule,
     RouterModule.forRoot(rootRouterConfig, { enableTracing: true }),
     BrowserAnimationsModule,
-   BrowserModule,
-   CdkTableModule,
-  HttpClientModule,
-   CommonModule,
+    BrowserModule,
+    CdkTableModule,
+    HttpClientModule,
+    CommonModule,
   
    
   ],

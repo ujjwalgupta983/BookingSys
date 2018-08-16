@@ -1,19 +1,21 @@
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
     <mat-sidenav class= "siden" #sidenav mode="side" opened>
-     
-    <ul class="side">
-         <li class="side_item" *ngFor="let i of j">
-      {{i}}
-         </li>
-       </ul>
- 
-       </mat-sidenav>
-     
-       <mat-sidenav-content>
-       
-         <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-       
-         </mat-sidenav-content>
+        <ul class="side">
+            <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} side_item">
+                <a class="nav-link" [routerLink]="[menuItem.path]">
+                    <p>{{menuItem.name}}</p>
+                </a>
+            </li>
+        </ul>
+   </mat-sidenav>
+    <mat-sidenav-content>
+          <p>
+            <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+          </p>
+          <div class="owner-layout">
+        <router-outlet></router-outlet>
+        </div>
+          </mat-sidenav-content>
      </mat-sidenav-container>
      
      <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>

@@ -5,18 +5,19 @@ import { OwnerLayoutComponent } from './owner-layout/owner-layout.component';
 import { OwnerNavComponent } from './owner-nav/owner-nav.component';
 import { OwnerSidenavComponent } from './owner-sidenav/owner-sidenav.component';
 import {AngMatModule} from '../ang-mat/ang-mat.module';
+import {UserProfileComponent} from '../user-profile/user-profile.component';
 @NgModule({
   imports: [
     CommonModule   ,
     OwnerRoutingModule,
-    AngMatModule
-  ],
+    AngMatModule,
+    ],
   declarations: 
   [
     OwnerLayoutComponent,
     OwnerNavComponent,
     OwnerSidenavComponent,
-   
+    UserProfileComponent
   ]
 
 })
